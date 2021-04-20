@@ -1,0 +1,13 @@
+{% extends 'todo/base.html' %}
+  {% load static %}
+    {% block content %}
+        <form class="" action="" method="post">
+          {% csrf_token %}
+          <p class="text-danger">Are you sure, you did this task?</p>
+          {{form.as_p}}
+          <input type="submit" name="" value="Confirm">
+
+        </form>
+        <a href="{% url 'home' %}"><input type="submit" name="" value="No"></a>
+
+    {% endblock %}

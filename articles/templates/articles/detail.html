@@ -1,0 +1,13 @@
+{% extends 'articles/base.html' %}
+{% load static %}
+
+
+  {% block content %}
+    <div class="details">
+        <h2>{{index.title}}</h2>
+        <h2>{{index.text}}</h2>
+    </div>
+    <h4> <a href="{% url 'article_edit' index.pk %}">Edit this post</a></h4>
+    <h4> <a href="{% url 'article_delete' index.pk %}">Delete this post</a></h4>
+
+  {% endblock %}

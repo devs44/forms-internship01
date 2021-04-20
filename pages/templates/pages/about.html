@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<h1>This is about</h1>
+<h2>Publishers</h2>
+<ul>
+  {% for publisher in objet_list %}
+    <li>{{ publisher.name }}</li>
+  {% endfor %}
+</ul>
+  </body>
+</html>

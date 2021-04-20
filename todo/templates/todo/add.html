@@ -1,0 +1,15 @@
+{% extends 'todo/base.html' %}
+  {% load static %}
+    {% block content %}
+    <div class="container-fluid" id="wrapper">
+      <div class="row">
+        <div class="col-lg-4 col-lg-offset-4" id="content">
+          <form action="{% url 'add' %}" method="POST" role="form">
+						{% csrf_token %}
+						{{ form.as_p }}
+            <input type="submit" name="" value="save">
+					</form>
+        </div>
+      </div>
+    </div>
+    {% endblock %}
